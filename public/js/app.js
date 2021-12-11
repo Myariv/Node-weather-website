@@ -17,7 +17,7 @@ domForm.addEventListener('submit', (e) => {
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
 
-    fetch(`http://localhost:3000/weather?adress=${location}`).then(res => {
+    fetch(`/weather?adress=${location}`).then(res => {
     
         res.json()
             .then(res => {

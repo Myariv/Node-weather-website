@@ -14,6 +14,8 @@ const Gecode = require('./utils/Gecode')
 //launch express
 const app = express()
 
+const port = process.env.PORT || 3000
+
 
 // set Paths dir 
 const publicDirPath = path.join(__dirname, '../public')
@@ -101,6 +103,6 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(3000, () => {
-    console.log('server is on port 3000');
+app.listen(port, () => {
+    console.log(`server is on port ${port}`);
 })
